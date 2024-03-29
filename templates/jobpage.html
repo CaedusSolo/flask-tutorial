@@ -4,27 +4,26 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./static/favicon/apple-touch-icon.png"
+      href="/static/favicon/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./static/favicon/favicon-32x32.png"
+      href="/static/favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./static/favicon/favicon-16x16.png"
+      href="/static/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="./static/favicon/site.webmanifest" />
+    <link rel="manifest" href="/static/favicon/site.webmanifest" />
     {% include "bootstrap.html" %}
     <title>{{job.title}} - Jovial Careers</title>
   </head>
   <body>
-    {% include 'nav.html' %}
-     {% include "banner.html" %}
+    {% include 'nav.html' %} {% include "banner.html" %}
     <div class="container">
       <h1 class="text-center mt-2 mb-4">Jovial Careers</h1>
       <h3 class="mb-2">{{job.title}}</h3>
@@ -43,6 +42,7 @@
       </ol>
       <h4>Salary</h4>
       <p>{{job.currency}} {{job.salary}}</p>
+      {% include "application_form.html" %}
     </div>
     {% include "footer.html" %}
   </body>
